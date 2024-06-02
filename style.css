@@ -79,4 +79,50 @@ body {
     width: 100%;
  }
  
+ .header .container .menuDiv .menuList { 
+    width: 200px;
+    background-color: white;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid var(--main-color);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    display: none;
+ }
+ .header .container .menuDiv {
+    position: relative;
+    padding-right: 20px;
+ }
+ .header .container .menuDiv .menuList::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 10px solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    right: 25px;
+    top: -20px;
+  }
+
+.header .container .menuDiv .menuList li {
+    padding: 10px;
+    transition: 0.3s;
+  }
+
+  .header .container .menuDiv .menuList .divider {
+    border: 1px solid rgba(128, 128, 128, 0.789);
+  }
+
+  .header .container .menuDiv .menuList li:hover {
+    padding-left: 20px;
+  }
+  
+  .header .container .menuDiv:hover .menuList {
+    display: block;
+  }
+
 /* End header */
